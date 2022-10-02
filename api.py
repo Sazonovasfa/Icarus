@@ -27,7 +27,7 @@ class Prediction(Resource):
         dscover = json_data['dscover']
         wind = json_data['wind']
         
-	pred = model.predict(np.array(map(listify, dscover)), np.array(map(listify, wind)))
+        pred = model.predict(np.array(map(listify, dscover)), np.array(map(listify, wind)))
 
         return {'corrected_value': float(pred)}
 
